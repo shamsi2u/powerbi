@@ -26,6 +26,11 @@ const routes: Routes = [
     ...canActivate(redirectUnauthorizedToLogin),
   },
   {
+    path:'managerdashboard',loadChildren:()=>import('./features/managerdashboard/managerdashboard.module').then((m)=>
+    m.ManagerdashboardModule),
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
+  {
     path: '**',
     redirectTo: '',
     pathMatch: 'full',

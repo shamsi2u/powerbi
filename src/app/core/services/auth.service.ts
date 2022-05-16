@@ -6,6 +6,10 @@ import {
   signInWithPopup,
   signOut,
 } from '@angular/fire/auth';
+import { AngularFireFunctions } from '@angular/fire/compat/functions';
+
+
+
 
 import { Injectable } from '@angular/core';
 import { LoginData } from '../interfaces/login-data.interface';
@@ -14,7 +18,8 @@ import { LoginData } from '../interfaces/login-data.interface';
   providedIn: 'root',
 })
 export class AuthService {
-  constructor(private auth: Auth) {}
+  constructor(private auth: Auth, //private fns :AngularFireFunctions
+  ) {}
 
   login({ email, password }: LoginData) {
     return signInWithEmailAndPassword(this.auth, email, password);
@@ -30,5 +35,9 @@ export class AuthService {
 
   logout() {
     return signOut(this.auth);
+  }
+  getUser(){
+    let user = this.auth.currentUser;
+    return user;
   }
 }

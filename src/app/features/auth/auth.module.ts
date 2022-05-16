@@ -9,6 +9,7 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 
+
 @NgModule({
   declarations: [LoginPageComponent, LoginFormComponent, RegisterPageComponent],
   imports: [
@@ -18,6 +19,8 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+
+
   ],
 })
 export class AuthModule {}

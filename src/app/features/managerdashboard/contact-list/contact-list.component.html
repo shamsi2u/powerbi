@@ -1,0 +1,95 @@
+<div class="container" style="margin-top: 70px;">
+  <div class="row">
+    <div class="col-md-4">
+      <button class="btn btn-primary" (click)="addContact()">Add Contact</button>
+    </div>
+
+  </div>
+  <div>
+    <table class="table table-hover" style="margin-top: 70px;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Email</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+
+          <td>{{ contact.id }}</td>
+          <td> {{ contact.name }}</td>
+          <td> {{ contact.phone }}</td>
+          <td> {{ contact.email }}</td>
+          <td>
+            <button class="btn btn-primary" (click)="selectContact(contact)"> Show details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card text-center" *ngIf="selectedContact">
+      <!-- <div class="card-header">
+        # {{selectedContact.id}}
+      </div>
+      <div class="card-block">
+        <h4 class="card-title">{{selectedContact.name}}</h4>
+        <p class="card-text">
+          <i class="fa fa-phone" style="margin-top:4px;">{{selectedContact.phone}}</i><br>
+          <i class="fa fa-mail"  style="margin-top:4px;">{{selectedContact.email}}</i>
+          {{selectedContact.description}}
+        </p> -->
+        <div class="row w-100">
+          <div class="col-12 col-sm-6 col-md-3 px-0">
+              <!-- <img src="http://demos.themes.guide/bodeo/assets/images/users/w104.jpg" alt="Debbie Schmidt" class="img-fluid rounded-circle d-block mx-auto"> -->
+          </div>
+          <div class="col-12 col-sm-6 col-md-9 text-center text-sm-left">
+              <label class="name lead">{{selectedContact.name}}</label>
+              <br>
+
+              <!-- <span class="fa fa-fw fa-map-marker fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="3903 W Alexander Rd"></span>
+              <span class="text-muted">3903 W Alexander Rd</span> -->
+              <br>
+
+              <span class="fa fa-fw fa-phone fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="(867) 322-1852"></span>
+              <span class="text-muted small">{{selectedContact.phone}}</span>
+              <br>
+
+              <span class="fa fa-fw fa-envelope fa-fw text-muted" data-toggle="tooltip" title="" data-original-title="debbie.schmidt@example.com"></span>
+              <!-- <span class="text-muted small text-truncate"><a href="email:{{}}"</span> -->
+
+          </div>
+      </div>
+
+
+    </div>
+    <!-- <ngx-float-button icon="add">
+      <ngx-float-item-button icon="person_add" content="float item 1"></ngx-float-item-button>
+      <ngx-float-item-button icon="gps_fixed" content="float item 2"></ngx-float-item-button>
+      <ngx-float-item-button icon="mode_edit" content="float item 3"></ngx-float-item-button>
+  </ngx-float-button> -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-contact-create></app-contact-create>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="close_moadal()">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal"  (click)="close_moadal()">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
+
