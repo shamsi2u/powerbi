@@ -15,9 +15,10 @@ export class SidenavComponent implements OnInit {
   @Output() toggleMenu = new EventEmitter();
 
   public routeLinks = [
-    { link: "firstpage", name: "Sales Performance Overview ", icon: "timeline" },
-    { link: "test", name: "Quaterly Performance ", icon: "trending_up" },
+    { link: "firstpage", name: "Sales Performance Overview ", icon: "dashboard" },
+    { link: "test", name: "Quaterly Performance ",  icon: "account_balance"  },
     { link: "app-gpforecast", name: "GP% Forecast", icon: "assessment icon" },
     { link: "app-todo1", name: "To Do", icon: "assignment" },
+    { link: "app-contacts", name: "contacts", icon: "contacts" },
   ];
 }

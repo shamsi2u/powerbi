@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ContactCreateComponent } from '../managerdashboard/contact-create/contact-create.component';
+import { ContactsComponent } from './contacts/contacts.component';
 import { DashboardComponent } from './dashboard.component';
 import { FirstpageComponent } from './firstpage/firstpage.component';
 import { GpforecastComponent } from './gpforecast/gpforecast.component';
@@ -13,7 +15,8 @@ const routes: Routes = [
   {path:'test',component:TestComponent},
   {path:'firstpage', component: FirstpageComponent},
   {path:'app-todo1', component: Todo1Component},
-  { path:'app-gpforecast', component:GpforecastComponent}
+  { path:'app-gpforecast', component:GpforecastComponent},
+  { path:'app-contacts', component:ContactsComponent}
 ] },
 
 ];

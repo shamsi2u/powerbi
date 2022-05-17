@@ -17,7 +17,7 @@ export class NavComponent implements OnInit {
   public routeLinks = [
     { link: "managermainpage", name: "Department Performance", icon: "dashboard" },
     { link: "managerfirstpage", name: "Department Managers Performance ", icon: "account_balance" },
-    { link: "app-sales-forcast", name: "Sales Forcast", icon: "contacts" },
+    { link: "app-sales-forcast", name: "Sales Forcast", icon: "assessment icon" },
     //{ link: "app-settings", name: "Settings", icon: "settings" },
     { link: "app-todo", name: "To do", icon: "assignment" },
     { link: "app-contact-list", name: "contacts", icon: "contacts" },

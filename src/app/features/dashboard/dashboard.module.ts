@@ -15,8 +15,11 @@ import { FirstpageComponent } from './firstpage/firstpage.component';
 import { SidenavModule } from './sidenav/sidenav.module';
 import { GpforecastComponent } from './gpforecast/gpforecast.component';
 import { Todo1Component } from './todo1/todo1.component';
+import { ContactsComponent } from './contacts/contacts.component';
+import { ContactCreateComponent } from '../managerdashboard/contact-create/contact-create.component';
+import { CreatecontactComponent } from './createcontact/createcontact.component';
 @NgModule({
-  declarations: [DashboardComponent, TestComponent, FirstpageComponent, GpforecastComponent, Todo1Component],
+  declarations: [DashboardComponent, TestComponent, FirstpageComponent, GpforecastComponent, Todo1Component, ContactsComponent, CreatecontactComponent],
   imports: [CommonModule, DashboardRoutingModule, MatToolbarModule,MatSidenavModule,MatIconModule,MatListModule,MatTooltipModule,
   FormsModule,SidenavModule],
 })

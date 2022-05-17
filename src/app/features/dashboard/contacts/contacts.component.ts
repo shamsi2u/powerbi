@@ -1,19 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-//import { NgxFloatButtonComponent } from 'ngx-float-button';
 import { DataService } from 'src/app/services/contacts.service';
-//import {NgxFloatButtonComponent} from 'ngx-float-button'
 declare let $: any;
 
 @Component({
-  selector: 'app-contact-list',
-  templateUrl: './contact-list.component.html',
-  styleUrls: ['./contact-list.component.css']
+  selector: 'app-contacts',
+  templateUrl: './contacts.component.html',
+  styleUrls: ['./contacts.component.css']
 })
-export class ContactListComponent implements OnInit {
-
+export class ContactsComponent implements OnInit {
   contacts: any;
-  selectedContact: any;
+  selectedContact:any
+
+
 
   constructor(public dataService: DataService, public router : Router) { }
 
@@ -36,3 +35,5 @@ export class ContactListComponent implements OnInit {
     $('#exampleModal').appendTo("body").modal('hide');
   }
 }
+
+
